@@ -36,13 +36,10 @@ const ourTeam = [
 
 btnAdd.addEventListener('click', function(){
   const newMember = {
-    nome: '',
-    ruolo:'',
-    immagine:''
+    nome: document.getElementById('name').value,
+    ruolo: document.getElementById('role').value,
+    immagine: document.getElementById('image').value
   };
-  newMember.nome = document.getElementById('name').value;
-  newMember.ruolo = document.getElementById('role').value;
-  newMember.immagine = document.getElementById('image').value;
   ourTeam.push(newMember);
   let i = ourTeam.length -1;
   genera(i);
